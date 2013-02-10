@@ -1,3 +1,8 @@
+<% if user_signed_in? %>
+    <h1>You're Signed In!</h1>
+
+<% else %>
+
 <div class="center hero-unit">
     <h1>Welcome to PetitsPets</h1>
 
@@ -6,7 +11,9 @@
       <%= link_to "One Month Rails", "http://omrails.com/" %> 
       application.
     </h2>
-    <%= link_to "Sign up now!", '#', 
+    <%= link_to "Sign up now!", new_user_registration_path, 
                                 class: "btn btn-large btn-primary" %>
 
 </div>
+
+<% end %>
